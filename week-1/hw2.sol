@@ -24,7 +24,7 @@ contract DynamicArray {
         for (uint256 i = 0; i < indices.length; i++) {
             uint256 index = indices[i];
             require(index < array.length, "Array index out of bound");
-            array[index] = array[array.length - (i + 1)];
+            array[index] = array[array.length - (i + 1)]; // Replace with last item
             length--;
         }
 
